@@ -190,6 +190,18 @@ p {
   margin-bottom: 25px;
 }
 
+.tabs__content {
+  display: none;
+}
+
+.tabs__content.tabs__content--active {
+  display: block;
+}
+
+.banner {
+  margin-bottom: 80px;
+}
+
 @font-face {
   font-family: "SFProDisplay" sans-serif;
   src: url(../fonts/SFProDisplay-Regular.woff2) format("woff2"), url(../fonts/SFProDisplay-Regular.woff) format("woff");
@@ -548,14 +560,6 @@ p {
   font-weight: 700;
 }
 
-.search__content-item {
-  display: none;
-}
-
-.search__content-item.tabs__content--active {
-  display: block;
-}
-
 .search__content-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,53 +648,36 @@ p {
   max-width: 210px;
 }
 
-.products .products__tabs {
+.products__tabs,
+.offers__tabs {
   margin-bottom: 25px;
 }
 
-.products .products__tabs-item {
+.products__tabs-item,
+.offers__tabs-item {
   font-size: 15px;
   line-height: 18px;
   padding-bottom: 10px;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
-.products .products__tabs-item:hover {
-  color: #387ce4;
-}
-
-.products .products__tabs-item::before {
-  content: "";
-  position: absolute;
-  left: auto;
-  right: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: #1c62cd;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.products .products__tabs-item:hover::before {
-  right: auto;
-  left: 0;
-  width: 100%;
-}
-
-.products .products__tabs-item + .products__tabs-item {
+.products__tabs-item + .products__tabs-item,
+.offers__tabs-item + .products__tabs-item {
   margin-left: 50px;
 }
 
-.products .slick-slide {
+.products .tabs__item--active,
+.offers .tabs__item--active {
+  border-bottom: 2px solid #1c62cd;
+  font-weight: 500;
+}
+
+.products .slick-slide,
+.offers .slick-slide {
   margin-right: 30px;
 }
 
-.products .slick-arrow {
+.products .slick-arrow,
+.offers .slick-arrow {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -700,27 +687,33 @@ p {
   background-color: transparent;
 }
 
-.products .slick-next {
+.products .slick-next,
+.offers .slick-next {
   right: -25px;
 }
 
-.products .slick-prev {
+.products .slick-prev,
+.offers .slick-prev {
   left: -25px;
 }
 
-.products__item {
+.products__item,
+.offers__item {
   position: relative;
 }
 
-.products__item:hover {
+.products__item:hover,
+.offers__item:hover {
   color: #1c62cd;
 }
 
-.products__item:hover .products-item__hover-text {
+.products__item:hover .products-item__hover-text,
+.offers__item:hover .products-item__hover-text {
   opacity: 1;
 }
 
-.products__item--wrap {
+.products__item--wrap,
+.offers__item--wrap {
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   position: relative;
@@ -734,12 +727,14 @@ p {
   transition: all 0.4s;
 }
 
-.products__item--wrap:hover {
+.products__item--wrap:hover,
+.offers__item--wrap:hover {
   -webkit-box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
           box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
 }
 
-.products__item-favorite {
+.products__item-favorite,
+.offers__item-favorite {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -749,7 +744,8 @@ p {
   z-index: 5;
 }
 
-.products__item-favorite::before {
+.products__item-favorite::before,
+.offers__item-favorite::before {
   content: "";
   position: absolute;
   top: 0;
@@ -759,11 +755,13 @@ p {
   background-image: url(../images/icon/heart.svg);
 }
 
-.products__item-favorite--active::before {
+.products__item-favorite--active::before,
+.offers__item-favorite--active::before {
   background-image: url(../images/icon/heart-active.svg);
 }
 
-.products__item-img {
+.products__item-img,
+.offers__item-img {
   -o-object-fit: contain;
      object-fit: contain;
   min-height: 200px;
@@ -771,20 +769,23 @@ p {
   margin: 0 auto 12px;
 }
 
-.products__item-title {
+.products__item-title,
+.offers__item-title {
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 21px;
 }
 
-.products__item-price {
+.products__item-price,
+.offers__item-price {
   font-family: "Barlow" sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
 }
 
-.products__item-basket {
+.products__item-basket,
+.offers__item-basket {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -794,7 +795,8 @@ p {
   border-radius: 10px 0px 0px 0px;
 }
 
-.products__item-basket::before {
+.products__item-basket::before,
+.offers__item-basket::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -803,6 +805,30 @@ p {
   height: 23px;
   background-image: url(../images/icon/basket-white.svg);
   background-repeat: no-repeat;
+}
+
+.products__more,
+.offers__more {
+  text-align: center;
+  margin: 35px 0 86px;
+}
+
+.products__more-link,
+.offers__more-link {
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 17px 43px;
+  background-color: #f0f0f4;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.products__more-link:hover,
+.offers__more-link:hover {
+  background-color: #d3d3de;
 }
 
 .products-item__hover-text {
@@ -843,6 +869,10 @@ p {
 
 .products__item--notify-box {
   display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
 }
 
 .products__item--wrap.products__item--not-available .products__item--notify-box {
@@ -865,7 +895,7 @@ p {
 .advertisement__sale-price--new::after{background-image:url(../images/icon/stock-ruble.svg)}
 .advertisement__sale-price--old{background-image:url(../images/icon/stock-line-old.svg)}
 .advertisement__sale-price--old::after{background-image:url(../images/icon/stock-ruble-old.svg)}
-.products__item-favorite::before{background-image:url(../images/icon/heart.svg)}
-.products__item-favorite--active::before{background-image:url(../images/icon/heart-active.svg)}
-.products__item-basket::before{background-image:url(../images/icon/basket-white.svg)}
+.products__item-favorite::before,.offers__item-favorite::before{background-image:url(../images/icon/heart.svg)}
+.products__item-favorite--active::before,.offers__item-favorite--active::before{background-image:url(../images/icon/heart-active.svg)}
+.products__item-basket::before,.offers__item-basket::before{background-image:url(../images/icon/basket-white.svg)}
 }
