@@ -1,0 +1,36 @@
+$accent: #1c62cd;
+$text: #2f3035;
+$base: #f0f0f4;
+$grey: #c4c4c4;
+$background: #e5e5e5;
+
+@mixin _1280 {
+	@media (max-width: 1280px) {
+		@content;
+	}
+}
+@mixin _1024 {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin _768 {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+@mixin _600 {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
+@mixin _480 {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+@mixin _350 {
+	@media (max-width: 350px) {
+		@content;
+	}
+}
