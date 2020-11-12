@@ -149,3 +149,13 @@ p {
 .banner {
 	margin-bottom: 80px;
 }
+
+.filter-style__select {
+	font-size: 14px;
+	line-height: 17px;
+	border: 1px solid #d7d9df;
+}
+
+.filter-style__select.checked {
+	border: 1px solid $accent;
+}

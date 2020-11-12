@@ -56,5 +56,20 @@ $(function () {
 		$(this).toggleClass('catalog__filter-item--active');
 	});
 
+	$('.filter-style').styler();
 
+
+	$('.item-title__drop').on('click', function () {
+		$(this).toggleClass('item-title__drop--active');
+		$(this).next().slideToggle('fast');
+	});
+
+	$(".js-range-slider").ionRangeSlider({
+		type: "double",
+		grid: false,
+		min: 0,
+		max: 1500000,
+		from: 100000,
+		to: 500000,
+	});
 });
