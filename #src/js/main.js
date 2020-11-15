@@ -64,6 +64,21 @@ $(function () {
 		$(this).next().slideToggle('fast');
 	});
 
+	$('.filter-style__select-text').on('click', function () {
+		$(this).toggleClass('select-text__checked');
+	});
+
+	$('.catalog__filter-btn--grid').on('click', function () {
+		$(this).addClass('catalog__filter-btn--active');
+		$('.catalog__filter-btn--line').removeClass('catalog__filter-btn--active');
+		$('.catalog__product-item').removeClass('product-item__list')
+	});
+	$('.catalog__filter-btn--line').on('click', function () {
+		$(this).addClass('catalog__filter-btn--active');
+		$('.catalog__filter-btn--grid').removeClass('catalog__filter-btn--active');
+		$('.catalog__product-item').addClass('product-item__list')
+	});
+
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",
 		grid: false,
