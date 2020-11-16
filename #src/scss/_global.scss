@@ -159,3 +159,10 @@ p {
 .filter-style__select.checked {
 	border: 1px solid $accent;
 }
+
+.more a {
+	font-size: 14px;
+	line-height: 17px;
+	border-bottom: 1px solid $accent;
+	color: $accent;
+}

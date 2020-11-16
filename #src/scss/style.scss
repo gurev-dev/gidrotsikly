@@ -450,30 +450,6 @@
 		}
 	}
 
-	&__item-favorite {
-		position: absolute;
-		top: 15px;
-		right: 20px;
-		width: 24px;
-		height: 22px;
-		background-color: transparent;
-		z-index: 5;
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 24px;
-			height: 22px;
-			background-image: url(../images/icon/heart.svg);
-		}
-	}
-
-	&__item-favorite--active::before {
-		background-image: url(../images/icon/heart-active.svg);
-	}
-
 	&__item-img {
 		object-fit: contain;
 		min-height: 200px;
@@ -538,6 +514,30 @@
 			background-color: darken($base, 10%);
 		}
 	}
+}
+
+.favorite-icon {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	width: 24px;
+	height: 22px;
+	background-color: transparent;
+	z-index: 5;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 24px;
+		height: 22px;
+		background-image: url(../images/icon/heart.svg);
+	}
+}
+
+.favorite-icon--active::before {
+	background-image: url(../images/icon/heart-active.svg);
 }
 
 .products-item__hover-text {
@@ -986,13 +986,6 @@
 .aside-filter__item-drop {
 	.aside-filter__more {
 		width: 100%;
-	}
-
-	.aside-filter__more-link {
-		font-size: 14px;
-		line-height: 17px;
-		border-bottom: 1px solid $accent;
-		color: $accent;
 	}
 }
 
