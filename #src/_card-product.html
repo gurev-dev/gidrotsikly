@@ -2,6 +2,7 @@
 	<div class="container">
 		<div class="card-product__inner">
 			<div class="card-product__img-box">
+				<span class="card-product__sale">sale</span>
 				<img class="card-product__images" src="images/content/card-product-img.png" alt="Гидроцикл">
 				<p class="card-product__price-old">1 200 475 ₽</p>
 				<p class="card-product__price-new">1 100 475 ₽</p>
@@ -15,53 +16,51 @@
 				<div class="card-product__rating">
 					<button class="card-product__favorite favorite-icon"></button>
 					<button class="card-product__comparison"></button>
-					<div class="card-product__rating-stars">
-
+					<div id="rateYo" class="card-product__rating-stars"></div>
+				</div>
+				<div class="products-inner">
+					<div class="products__tabs">
+						<a class="tabs__item card-product__tabs tabs__item--active" href="#card-product--1">
+							Характеристики
+						</a>
+						<a class="tabs__item card-product__tabs" href="#card-product--2">
+							Наличие в магазине
+						</a>
 					</div>
-					<div class="products-inner">
-						<div class="products__tabs">
-							<a class="tabs__item card-product__tabs tabs__item--active" href="#card-product--1">
-								Характеристики
-							</a>
-							<a class="tabs__item card-product__tabs" href="#card-product--2">
-								Наличие в магазине
-							</a>
-						</div>
 
-						<div class="products__content">
-							<div id="card-product--1" class="tabs__content card-product__tabs-content tabs__content--active">
-								<ul class="card-product__list">
-									<li class="card-product__item">
-										<div class="card-product__item-left">Производитель</div>
-										<div class="card-product__item-right">Канада</div>
-									</li>
-									<li class="card-product__item">
-										<div class="card-product__item-left">Количество мест, шт: </div>
-										<div class="card-product__item-right">3</div>
-									</li>
-									<li class="card-product__item">
-										<div class="card-product__item-left">Мощность, л.с.</div>
-										<div class="card-product__item-right">155</div>
-									</li>
-									<li class="card-product__item">
-										<div class="card-product__item-left">Тип двигателя</div>
-										<div class="card-product__item-right">Бензиновый</div>
-									</li>
-									<li class="card-product__item">
-										<div class="card-product__item-left">Год выпуска</div>
-										<div class="card-product__item-right">2018</div>
-									</li>
-								</ul>
-								<div class="card-product__more more">
-									<a class="card-product__more-link more-link" href="#">
-										Показать еще
-									</a>
-								</div>
-								<button class="card-product__btn">купить</button>
+					<div class="products__content">
+						<div id="card-product--1" class="tabs__content card-product__tabs-content tabs__content--active">
+							<ul class="card-product__list">
+								<li class="card-product__item">
+									<div class="card-product__item-left">Производитель</div>
+									<div class="card-product__item-right">Канада</div>
+								</li>
+								<li class="card-product__item">
+									<div class="card-product__item-left">Количество мест, шт: </div>
+									<div class="card-product__item-right">3</div>
+								</li>
+								<li class="card-product__item">
+									<div class="card-product__item-left">Мощность, л.с.</div>
+									<div class="card-product__item-right">155</div>
+								</li>
+								<li class="card-product__item">
+									<div class="card-product__item-left">Тип двигателя</div>
+									<div class="card-product__item-right">Бензиновый</div>
+								</li>
+								<li class="card-product__item">
+									<div class="card-product__item-left">Год выпуска</div>
+									<div class="card-product__item-right">2018</div>
+								</li>
+							</ul>
+							<div class="card-product__more more">
+								<a class="card-product__more-link more-link" href="#">
+									Показать еще
+								</a>
 							</div>
-							<div id="card-product--2" class="tabs__content card-product__tabs-content">
-								В наличии
-							</div>
+							<button class="card-product__btn">купить</button>
+						</div>
+						<div id="card-product--2" class="tabs__content card-product__tabs-content">
+							В наличии
 						</div>
 					</div>
 				</div>

@@ -453,7 +453,6 @@
 	&__item-img {
 		object-fit: contain;
 		min-height: 200px;
-		max-width: 200px;
 		margin: 0 auto 12px;
 	}
 
@@ -709,13 +708,6 @@
 	.products__item--wrap {
 		max-width: 100%;
 		min-height: 375px;
-	}
-
-	.products__item--sale::before {
-	}
-
-	.products__item-img {
-		max-width: 275px;
 	}
 }
 
@@ -1270,6 +1262,180 @@
 }
 
 // CATALOG END ==========================================
+
+// CARD-PRODUCT ==========================================
+
+.card-product {
+	&__inner {
+		display: flex;
+		padding: 44px 0 80px;
+	}
+
+	&__img-box {
+		font-family: "Barlow" sans-serif;
+		max-width: 500px;
+		margin-right: 60px;
+		text-align: center;
+		position: relative;
+	}
+
+	&__sale {
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 15px;
+		line-height: 18px;
+		padding: 13px 24px;
+		text-transform: uppercase;
+		background-color: $accent;
+		color: #fff;
+		border-radius: 3px;
+		letter-spacing: 0.12em;
+	}
+
+	&__img-box a {
+		font-family: "SFProDisplay" sans-serif;
+		font-size: 15px;
+		line-height: 18px;
+		color: $accent;
+	}
+
+	&__images {
+		padding-top: 60px;
+	}
+
+	&__price-old {
+		font-size: 30px;
+		line-height: 36px;
+		margin-bottom: 12px;
+		color: rgba($text, $alpha: 0.6);
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 27%;
+			height: 1px;
+			bottom: 16px;
+			position: absolute;
+			background-color: rgba(47, 48, 53, 0.6);
+			transform: rotate(-10deg);
+		}
+	}
+
+	&__price-new {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 48px;
+		margin-bottom: 17px;
+	}
+
+	&__content {
+		padding: 0 40px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 36px;
+		padding-bottom: 10px;
+	}
+
+	&__code {
+		font-size: 15px;
+		line-height: 18px;
+		color: rgba(47, 48, 53, 0.6);
+		margin-bottom: 23px;
+	}
+
+	&__rating {
+		position: relative;
+		margin-bottom: 50px;
+	}
+
+	&__favorite {
+		top: 6px;
+		left: 0;
+	}
+
+	&__comparison {
+		width: 20px;
+		height: 28px;
+		margin-left: 50px;
+		margin-right: 25px;
+		background-color: transparent;
+		background-image: url(../images/content/comparison.svg);
+	}
+
+	&__rating-stars {
+	}
+
+	&__tabs {
+		font-size: 20px;
+		line-height: 24px;
+		color: rgba(47, 48, 53, 0.6);
+		transition: color 0.4s;
+
+		&:hover {
+			color: $accent;
+			transition: color 0.4s;
+		}
+	}
+	&__tabs.tabs__item--active {
+		font-weight: 700;
+		color: $text;
+		border-bottom: 2px solid $accent;
+	}
+
+	&__tabs:first-child {
+		margin-right: 35px;
+	}
+
+	&__item {
+		display: flex;
+		border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	&__item:last-child {
+		margin-bottom: 26px;
+	}
+
+	&__item-left {
+		max-width: 370px;
+		width: 100%;
+		margin-right: 20px;
+	}
+
+	&__more {
+		margin-bottom: 45px;
+	}
+
+	&__btn {
+		font-size: 14px;
+		line-height: 17px;
+		padding: 17px 53px;
+		text-align: center;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		border-radius: 3px;
+		background-color: $accent;
+		color: #fff;
+		transition: background-color 0.4s;
+
+		&:hover {
+			background-color: darken($accent, 10%);
+			transition: background-color 0.4s;
+		}
+	}
+}
+
+.jq-ry-container {
+	display: inline-block;
+}
+
+// CARD-PRODUCT END ==========================================
 
 // FOOTER ============================================
 

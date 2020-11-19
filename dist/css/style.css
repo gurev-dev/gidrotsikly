@@ -146,6 +146,7 @@ ul li {
 
 img {
   vertical-align: top;
+  max-width: 100%;
 }
 
 h1,
@@ -763,7 +764,6 @@ p {
   -o-object-fit: contain;
      object-fit: contain;
   min-height: 200px;
-  max-width: 200px;
   margin: 0 auto 12px;
 }
 
@@ -1035,10 +1035,6 @@ p {
 .product-item__list .products__item--wrap {
   max-width: 100%;
   min-height: 375px;
-}
-
-.product-item__list .products__item-img {
-  max-width: 275px;
 }
 
 .catalog__filter-sorting .catalog__filter-category {
@@ -1639,6 +1635,187 @@ p {
   color: #fff;
 }
 
+.card-product__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 44px 0 80px;
+}
+
+.card-product__img-box {
+  font-family: "Barlow" sans-serif;
+  max-width: 500px;
+  margin-right: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.card-product__sale {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 13px 24px;
+  text-transform: uppercase;
+  background-color: #1c62cd;
+  color: #fff;
+  border-radius: 3px;
+  letter-spacing: 0.12em;
+}
+
+.card-product__img-box a {
+  font-family: "SFProDisplay" sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1c62cd;
+}
+
+.card-product__images {
+  padding-top: 60px;
+}
+
+.card-product__price-old {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 12px;
+  color: rgba(47, 48, 53, 0.6);
+  position: relative;
+}
+
+.card-product__price-old::before {
+  content: "";
+  width: 27%;
+  height: 1px;
+  bottom: 16px;
+  position: absolute;
+  background-color: rgba(47, 48, 53, 0.6);
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.card-product__price-new {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 17px;
+}
+
+.card-product__content {
+  padding: 0 40px;
+}
+
+.card-product__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  padding-bottom: 10px;
+}
+
+.card-product__code {
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(47, 48, 53, 0.6);
+  margin-bottom: 23px;
+}
+
+.card-product__rating {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.card-product__favorite {
+  top: 6px;
+  left: 0;
+}
+
+.card-product__comparison {
+  width: 20px;
+  height: 28px;
+  margin-left: 50px;
+  margin-right: 25px;
+  background-color: transparent;
+  background-image: url(../images/content/comparison.svg);
+}
+
+.card-product__tabs {
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(47, 48, 53, 0.6);
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.card-product__tabs:hover {
+  color: #1c62cd;
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.card-product__tabs.tabs__item--active {
+  font-weight: 700;
+  color: #2f3035;
+  border-bottom: 2px solid #1c62cd;
+}
+
+.card-product__tabs:first-child {
+  margin-right: 35px;
+}
+
+.card-product__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+}
+
+.card-product__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.card-product__item:last-child {
+  margin-bottom: 26px;
+}
+
+.card-product__item-left {
+  max-width: 370px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.card-product__more {
+  margin-bottom: 45px;
+}
+
+.card-product__btn {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 17px 53px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: #1c62cd;
+  color: #fff;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.card-product__btn:hover {
+  background-color: #164da0;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.jq-ry-container {
+  display: inline-block;
+}
+
 .footer {
   background-color: #f0f0f4;
 }
@@ -1800,6 +1977,7 @@ p {
 .item-title__drop--active::before{background-image:url(../images/icon/drop-up.svg)}
 .aside-filter__item-list .jq-selectbox__trigger-arrow{background-image:url(../images/icon/drop-down.svg)}
 .aside-filter__item-list .item-list__select.dropdown.opened .jq-selectbox__trigger-arrow{background-image:url(../images/icon/drop-up.svg)}
+.card-product__comparison{background-image:url(../images/content/comparison.svg)}
 .instagram{background-image:url(../images/icon/instagram.svg)}
 .vk{background-image:url(../images/icon/vk.svg)}
 .facebook{background-image:url(../images/icon/facebook.svg)}

@@ -89,4 +89,13 @@ $(function () {
 		from: 100000,
 		to: 500000,
 	});
+
+	$("#rateYo").rateYo({
+		rating: 4,
+		readOnly: true,
+		ratedFill: "#1c62cd",
+		normalFill: "#c4c4c4"
+	});
+
+
 });
