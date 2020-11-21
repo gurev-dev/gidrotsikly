@@ -1816,6 +1816,190 @@ p {
   display: inline-block;
 }
 
+.detailed-info {
+  margin-bottom: 100px;
+}
+
+.detailed-info__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 23px 34px;
+  background-color: #f0f0f4;
+  margin-bottom: 50px;
+}
+
+.detailed-info__tab {
+  color: rgba(47, 48, 53, 0.6);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.detailed-info__tab:hover {
+  color: #1c62cd;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.detailed-info__tab.tabs__item--active {
+  color: #2f3035;
+  border-bottom: 2px solid #1c62cd;
+}
+
+.detailed-info__export-top {
+  margin-bottom: 50px;
+  font-size: 17px;
+  line-height: 20px;
+  color: rgba(47, 48, 53, 0.7);
+}
+
+.export-top__search-lable {
+  position: relative;
+  margin-right: 155px;
+}
+
+.export-top__search-lable::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 16px;
+  height: 17px;
+  background-image: url(../images/icon/search.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+          transform: translateY(-40%);
+}
+
+.export-top__search {
+  max-width: 313px;
+  width: 100%;
+  height: 33px;
+  font-size: 13px;
+  padding: 0 15px;
+  margin-left: 17px;
+  padding-right: 30px;
+  color: #c4c4c4;
+  background-color: #f0f0f4;
+  border-radius: 3px;
+}
+
+.export-top__radio-lable {
+  margin-right: 57px;
+}
+
+.export-top__radio {
+  vertical-align: -2px;
+  width: 14px;
+  height: 14px;
+  margin-right: 18px;
+  border-radius: 1px;
+  background-color: transparent;
+}
+
+.export-top .filter-style__select.checked {
+  border: 2px solid #1c62cd;
+  border-radius: 2px;
+  position: relative;
+}
+
+.export-top .filter-style__select.checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background-color: #1c62cd;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.export-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f4;
+  color: rgba(47, 48, 53, 0.7);
+}
+
+.export-info__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  border-bottom: none;
+  color: #2f3035;
+}
+
+.export-info__address {
+  max-width: 300px;
+  width: 100%;
+  padding-right: 113px;
+}
+
+.export-info__works {
+  max-width: 260px;
+  width: 100%;
+  padding-right: 95px;
+}
+
+.export-info__works-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.export-info__works-box:first-child {
+  margin-bottom: 9px;
+}
+
+.export-info__available {
+  max-width: 217px;
+  width: 100%;
+  padding-right: 100px;
+}
+
+.export-info__num {
+  max-width: 265px;
+  width: 100%;
+}
+
+.export-info__btn {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  height: 35px;
+  padding: 9px 40px;
+  border-radius: 3px;
+  background-color: #1c62cd;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.works-day {
+  display: inline-block;
+}
+
+.works-time {
+  display: inline-block;
+}
+
 .footer {
   background-color: #f0f0f4;
 }
@@ -1978,6 +2162,7 @@ p {
 .aside-filter__item-list .jq-selectbox__trigger-arrow{background-image:url(../images/icon/drop-down.svg)}
 .aside-filter__item-list .item-list__select.dropdown.opened .jq-selectbox__trigger-arrow{background-image:url(../images/icon/drop-up.svg)}
 .card-product__comparison{background-image:url(../images/content/comparison.svg)}
+.export-top__search-lable::after{background-image:url(../images/icon/search.svg)}
 .instagram{background-image:url(../images/icon/instagram.svg)}
 .vk{background-image:url(../images/icon/vk.svg)}
 .facebook{background-image:url(../images/icon/facebook.svg)}

@@ -1366,9 +1366,6 @@
 		background-image: url(../images/content/comparison.svg);
 	}
 
-	&__rating-stars {
-	}
-
 	&__tabs {
 		font-size: 20px;
 		line-height: 24px;
@@ -1436,6 +1433,177 @@
 }
 
 // CARD-PRODUCT END ==========================================
+
+// DETAILED-INFO ==========================================
+
+.detailed-info {
+	margin-bottom: 100px;
+	&__tabs {
+		display: flex;
+		justify-content: space-between;
+		padding: 23px 34px;
+		background-color: $base;
+		margin-bottom: 50px;
+	}
+
+	&__tab {
+		color: rgba(47, 48, 53, 0.6);
+		transition: color 0.3s;
+
+		&:hover {
+			color: $accent;
+			transition: color 0.3s;
+		}
+	}
+
+	&__tab.tabs__item--active {
+		color: $text;
+		border-bottom: 2px solid $accent;
+	}
+
+	&__export-top {
+		margin-bottom: 50px;
+		font-size: 17px;
+		line-height: 20px;
+		color: rgba(47, 48, 53, 0.7);
+	}
+}
+
+.export-top {
+	&__search-lable {
+		position: relative;
+		margin-right: 155px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			width: 16px;
+			height: 17px;
+			background-image: url(../images/icon/search.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translateY(-40%);
+		}
+	}
+
+	&__search {
+		max-width: 313px;
+		width: 100%;
+		height: 33px;
+		font-size: 13px;
+		padding: 0 15px;
+		margin-left: 17px;
+		padding-right: 30px;
+		color: $grey;
+		background-color: $base;
+		border-radius: 3px;
+	}
+
+	&__radio-lable {
+		margin-right: 57px;
+	}
+
+	&__radio {
+		vertical-align: -2px;
+		width: 14px;
+		height: 14px;
+		margin-right: 18px;
+		border-radius: 1px;
+		background-color: transparent;
+	}
+
+	.filter-style__select.checked {
+		border: 2px solid #1c62cd;
+		border-radius: 2px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 6px;
+			height: 6px;
+			border-radius: 1px;
+			background-color: $accent;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.export-info {
+	&__item {
+		display: flex;
+		font-size: 16px;
+		line-height: 19px;
+		padding: 20px 0;
+		border-bottom: 1px solid $base;
+		color: rgba(47, 48, 53, 0.7);
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 20px;
+		line-height: 24px;
+		border-bottom: none;
+		color: $text;
+	}
+
+	&__address {
+		max-width: 300px;
+		width: 100%;
+		padding-right: 113px;
+	}
+
+	&__works {
+		max-width: 260px;
+		width: 100%;
+		padding-right: 95px;
+	}
+
+	&__works-box {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__works-box:first-child {
+		margin-bottom: 9px;
+	}
+
+	&__available {
+		max-width: 217px;
+		width: 100%;
+		padding-right: 100px;
+	}
+
+	&__num {
+		max-width: 265px;
+		width: 100%;
+	}
+
+	&__btn {
+		font-size: 13px;
+		line-height: 16px;
+		letter-spacing: 0.12em;
+		height: 35px;
+		padding: 9px 40px;
+		border-radius: 3px;
+		background-color: $accent;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+.works-day {
+	display: inline-block;
+}
+.works-time {
+	display: inline-block;
+}
+
+// DETAILED-INFO END ==========================================
 
 // FOOTER ============================================
 
