@@ -112,6 +112,10 @@ p {
 	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
+
+	@include _480 {
+		padding: 0 10px;
+	}
 }
 
 .section__blog {

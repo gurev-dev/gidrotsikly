@@ -14,6 +14,11 @@ $background: #e5e5e5;
 		@content;
 	}
 }
+@mixin _920 {
+	@media (max-width: 920px) {
+		@content;
+	}
+}
 @mixin _768 {
 	@media (max-width: 768px) {
 		@content;
@@ -26,11 +31,6 @@ $background: #e5e5e5;
 }
 @mixin _480 {
 	@media (max-width: 480px) {
-		@content;
-	}
-}
-@mixin _350 {
-	@media (max-width: 350px) {
 		@content;
 	}
 }

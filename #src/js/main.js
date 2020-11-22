@@ -80,6 +80,14 @@ $(function () {
 		$('.catalog__product-item').addClass('product-item__list')
 	});
 
+	$('.menu__burger').on('click', function () {
+		$('.menu__categories').addClass('open');
+	});
+	$('.menu__mobile-close').on('click', function () {
+		$('.menu__categories').removeClass('open');
+	});
+
+
 
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",

@@ -11,10 +11,31 @@
 		align-items: center;
 		min-height: 122px;
 		font-weight: 700;
+
+		@include _480 {
+			min-height: 60px;
+		}
 	}
 
 	&__user-box {
 		display: flex;
+	}
+
+	&__logo {
+		@include _480 {
+			width: 80px;
+			height: 16px;
+			background-image: url(../images/logo-mobile.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	&__logo-img {
+		@include _480 {
+			display: none;
+		}
 	}
 
 	&__address {
@@ -33,15 +54,33 @@
 			left: 2px;
 			bottom: 5px;
 		}
+
+		@include _1280 {
+			margin-right: 0;
+		}
+
+		@include _920 {
+			display: none;
+		}
 	}
 }
 
 .menu {
+	&__list {
+		@include _920 {
+			display: none;
+		}
+	}
+
 	&__item {
 		display: inline-block;
 
 		& + .menu__item {
 			margin-left: 50px;
+
+			@include _1280 {
+				margin-left: 15px;
+			}
 		}
 	}
 
@@ -51,6 +90,45 @@
 		justify-content: space-around;
 		align-items: center;
 		background-color: $base;
+
+		@include _920 {
+			position: fixed;
+			left: 0;
+			top: 0;
+			max-width: 300px;
+			width: 100%;
+			height: auto;
+			padding: 55px 0;
+			background-color: #fff;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: start;
+			transition: all 0.5s ease-in-out;
+			transform: translateX(-150vh);
+		}
+
+		&.open {
+			transition: all 0.5s ease-in-out;
+			transform: translateX(0);
+		}
+	}
+
+	&__categories-item {
+		@include _920 {
+			padding: 0 10px;
+			width: 100%;
+		}
+	}
+
+	&__mobile {
+		display: none;
+
+		@include _920 {
+			display: block;
+			padding: 0 10px;
+			width: 100%;
+		}
 	}
 
 	&__categories-link {
@@ -58,33 +136,107 @@
 		position: relative;
 		transition: all 0.3s;
 
-		&:hover {
-			color: lighten($accent, 10%);
+		@media (min-width: 921px) {
+			&:hover {
+				color: lighten($accent, 10%);
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: auto;
+				right: 0;
+				bottom: -3px;
+				width: 0;
+				height: 3px;
+				background-color: $accent;
+				transition: all 0.3s;
+			}
+
+			&:hover::before {
+				right: auto;
+				left: 0;
+				width: 100%;
+			}
 		}
 
-		&::before {
-			content: "";
-			position: absolute;
-			left: auto;
-			right: 0;
-			bottom: -3px;
-			width: 0;
-			height: 3px;
-			background-color: $accent;
-			transition: all 0.3s;
+		@include _920 {
+			margin-bottom: 45px;
+			padding: 0;
+			padding-left: 45px;
+			display: block;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		}
+	}
 
-		&:hover::before {
-			right: auto;
-			left: 0;
+	&__burger {
+		display: none;
+		width: 34px;
+		height: 34px;
+		background-color: transparent;
+		position: relative;
+
+		& span {
 			width: 100%;
+			height: 3px;
+			background-color: $text;
+			position: absolute;
+			left: 0;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: $text;
+			}
+
+			&::before {
+				top: -10px;
+			}
+
+			&::after {
+				bottom: -10px;
+			}
 		}
+
+		@include _920 {
+			display: block;
+		}
+	}
+}
+
+.mobile__link {
+	margin-bottom: 45px;
+	padding: 0;
+	display: block;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	& img {
+		margin-right: 20px;
+	}
+}
+
+.menu__mobile-close {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	@include _920 {
+		display: block;
 	}
 }
 
 .user {
 	&__list {
 		margin-right: 15px;
+
+		@include _480 {
+			margin-right: 0;
+		}
 	}
 
 	&__item {
