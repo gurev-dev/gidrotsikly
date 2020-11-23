@@ -120,6 +120,10 @@ p {
 
 .section__blog {
 	margin-bottom: 80px;
+
+	@include _600 {
+		margin-bottom: 40px;
+	}
 }
 
 .products__item--sale::before {

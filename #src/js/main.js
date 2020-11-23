@@ -56,6 +56,8 @@ $(function () {
 		$(this).toggleClass('catalog__filter-item--active');
 	});
 
+
+
 	$('.filter-style').styler();
 
 
@@ -63,6 +65,8 @@ $(function () {
 		$(this).toggleClass('item-title__drop--active');
 		$(this).next().slideToggle('fast');
 	});
+
+
 
 	$('.filter-style__select-text').on('click', function () {
 		$(this).toggleClass('select-text__checked');
@@ -80,10 +84,23 @@ $(function () {
 		$('.catalog__product-item').addClass('product-item__list')
 	});
 
+
+
 	$('.menu__burger').on('click', function () {
 		$('.menu__categories').addClass('open');
 	});
 	$('.menu__mobile-close').on('click', function () {
+		$('.menu__categories').removeClass('open');
+	});
+
+	$(document).on('click', function (e) {
+		var $target = $(e.target);
+		if ($target.closest(".menu__categories").length == 0 && $target.closest(".menu__burger").length == 0) {
+			$(".menu__categories").removeClass("open");
+		}
+	});
+
+	$('.menu__categories').on('click', function () {
 		$('.menu__categories').removeClass('open');
 	});
 
