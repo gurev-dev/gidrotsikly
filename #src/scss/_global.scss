@@ -157,6 +157,25 @@ p {
 
 .banner {
 	margin-bottom: 80px;
+	text-align: center;
+
+	&__mob {
+		display: none;
+
+		@include _768 {
+			display: block;
+		}
+	}
+
+	&__desk {
+		@include _768 {
+			display: none;
+		}
+	}
+
+	@include _768 {
+		margin-bottom: 30px;
+	}
 }
 
 .filter-style__select {

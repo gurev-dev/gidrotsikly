@@ -24,7 +24,15 @@ $(function () {
 		slidesToShow: 1,
 		adaptiveHeight: true,
 		prevArrow: '<button type="button" class="slick-prev slick-arrow"><img src="images/icon/arrow-left.svg" alt="стрелка в лево"></button>',
-		nextArrow: '<button type="button" class="slick-next slick-arrow"><img src="images/icon/arrow-right.svg" alt="стрелка в право"></button>'
+		nextArrow: '<button type="button" class="slick-next slick-arrow"><img src="images/icon/arrow-right.svg" alt="стрелка в право"></button>',
+		responsive: [
+			{
+				breakpoint: 921,
+				settings: {
+					arrows: false,
+				}
+			}
+		]
 	});
 
 
@@ -48,7 +56,50 @@ $(function () {
 		slidesToShow: 4,
 		variableWidth: true,
 		prevArrow: '<button type="button" class="slick-prev slick-arrow"><img src="images/icon/arrow-left-black.svg" alt="стрелка в лево"></button>',
-		nextArrow: '<button type="button" class="slick-next slick-arrow"><img src="images/icon/arrow-right-black.svg" alt="стрелка в право"></button>'
+		nextArrow: '<button type="button" class="slick-next slick-arrow"><img src="images/icon/arrow-right-black.svg" alt="стрелка в право"></button>',
+		responsive: [
+			{
+				breakpoint: 1281,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 3,
+					dots: true,
+					arrows: false,
+					variableWidth: false,
+				}
+			},
+			{
+				breakpoint: 1089,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					dots: true,
+					arrows: false,
+					variableWidth: false,
+				}
+			},
+			{
+				breakpoint: 831,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: false,
+					variableWidth: false,
+				}
+			},
+			{
+				breakpoint: 568,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: false,
+					variableWidth: true,
+					centerMode: true,
+				}
+			},
+		]
 	});
 
 

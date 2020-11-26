@@ -106,6 +106,7 @@
 			justify-content: start;
 			transition: all 0.5s ease-in-out;
 			transform: translateX(-100%);
+			z-index: 100;
 		}
 
 		&.open {
@@ -618,10 +619,12 @@
 
 	.slick-list {
 		min-height: 450px;
+		overflow: hidden;
 	}
 
 	.slick-slide {
-		margin-right: 30px;
+		margin-right: 15px;
+		margin-left: 15px;
 		margin-top: 20px;
 	}
 
@@ -639,6 +642,28 @@
 
 	.slick-prev {
 		left: -25px;
+	}
+
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 25px;
+
+		li {
+			margin: 0 10px;
+		}
+
+		button {
+			width: 12px;
+			height: 12px;
+			background-color: $grey;
+			font-size: 0;
+			border-radius: 50%;
+		}
+
+		.slick-active button {
+			background-color: $accent;
+		}
 	}
 
 	&__item {
@@ -717,6 +742,10 @@
 	&__more {
 		text-align: center;
 		margin: 15px 0 86px;
+
+		@include _768 {
+			margin: 15px 0 30px;
+		}
 	}
 
 	&__more-link {
@@ -1835,12 +1864,27 @@
 	&__top-inner {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include _600 {
+			display: block;
+		}
 	}
 
 	&__col {
 		font-size: 14px;
 		line-height: 17px;
 		font-weight: 700;
+
+		@include _600 {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__info {
+		padding: 0 10px;
 	}
 
 	&__info-title {
@@ -1862,6 +1906,10 @@
 
 	&__social {
 		margin-top: 40px;
+
+		@include _600 {
+			text-align: center;
+		}
 	}
 
 	&__social-link {
@@ -1874,12 +1922,25 @@
 
 		&:last-child {
 			margin-right: 76px;
+
+			@include _920 {
+				margin-right: 0;
+			}
 		}
 	}
 
 	&__copy-inner {
 		padding-bottom: 22px;
 		text-align: center;
+
+		@include _600 {
+			text-align: left;
+
+			& a {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
 	}
 
 	&__copy-text {
@@ -1889,6 +1950,10 @@
 
 		&:not(:first-child) {
 			margin-left: 80px;
+
+			@include _600 {
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -1896,21 +1961,33 @@
 	&__title {
 		max-width: 225px;
 		margin-bottom: 34px;
+
+		@include _600 {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			text-align: center;
+		}
 	}
 
 	&__form {
 		max-width: 310px;
 
-		& input {
-			font-size: 14px;
-			line-height: 17px;
-			padding: 8px 12px 9px;
-			background-color: #fff;
+		@include _600 {
+			margin: 0 auto;
+		}
 
+		& input {
 			&::placeholder {
 				color: $grey;
 			}
 		}
+	}
+
+	&__label {
+		font-size: 14px;
+		line-height: 17px;
+		padding: 8px 12px 9px;
+		background-color: #fff;
 	}
 
 	&__btn {
