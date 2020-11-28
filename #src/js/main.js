@@ -174,4 +174,17 @@ $(function () {
 	});
 
 
+
+	var mql = window.matchMedia('all and (max-width: 600px)');
+	if (mql.matches) {
+		$('.footer__info--drop').on('click', function () {
+			$(this).toggleClass('active');
+			$(this).next().slideToggle('fast');
+		});
+	} else {
+		$('.footer__info--drop').off('click', function () {
+			return false;
+		});
+	}
+
 });

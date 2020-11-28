@@ -1887,6 +1887,39 @@
 		padding: 0 10px;
 	}
 
+	&__info--drop {
+		position: relative;
+
+		@include _600 {
+			padding-bottom: 5px;
+			border-bottom: 1px solid #fff;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 4px;
+				width: 12px;
+				height: 8px;
+				background-image: url(../images/icon/drop-up.svg);
+			}
+		}
+	}
+
+	.active {
+		@include _600 {
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 4px;
+				width: 12px;
+				height: 8px;
+				background-image: url(../images/icon/drop-down.svg);
+			}
+		}
+	}
+
 	&__info-title {
 		margin-bottom: 9px;
 	}
