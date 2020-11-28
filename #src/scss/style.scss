@@ -851,8 +851,6 @@
 .breadcrumbs {
 	&__list {
 		padding: 43px 0 41px;
-		width: 1200px;
-		overflow: hidden;
 	}
 
 	&__item {
@@ -890,12 +888,20 @@
 .catalog {
 	.products__item--wrap {
 		padding: 52px 19px 25px;
+
+		@include _920 {
+			max-width: 100%;
+		}
 	}
 
 	&__filter {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 50px;
+
+		@include _768 {
+			display: block;
+		}
 	}
 
 	&__filter-item {
@@ -905,6 +911,10 @@
 		background-color: $base;
 		padding: 4px 23px;
 		border-radius: 3px;
+
+		@include _768 {
+			margin-bottom: 10px;
+		}
 
 		&:not(:last-child) {
 			margin-right: 8px;
@@ -931,11 +941,20 @@
 
 	&__inner {
 		display: flex;
+
+		@include _768 {
+			display: block;
+		}
 	}
 
 	&__aside {
 		min-width: 290px;
 		margin-right: 10px;
+
+		@include _768 {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__product-grid {
@@ -947,6 +966,12 @@
 
 	&__product-pagination {
 		margin: 26px auto 0;
+	}
+
+	&__product-item {
+		@include _920 {
+			width: 100%;
+		}
 	}
 }
 
@@ -1026,6 +1051,10 @@
 
 		&:hover {
 			color: $accent;
+		}
+
+		@include _480 {
+			margin: 0;
 		}
 	}
 
